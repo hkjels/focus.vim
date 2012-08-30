@@ -6,7 +6,7 @@
 " editing. Go fullscreen and run `tfm` to really
 " get into the mood.
 
-function! ToggleFocusMode()
+fun! ToggleFocusMode#ToggleFocusMode()
   if (&foldcolumn != 12)
     set noruler
     set nonumber
@@ -26,5 +26,5 @@ function! ToggleFocusMode()
     set numberwidth&
     exec 'colorscheme ' . g:colors_name
   endif
-endfunc
+endfun
 
