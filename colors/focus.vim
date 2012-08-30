@@ -8,13 +8,16 @@
 " Version:  0.0.1
 "
 
-" Clear current highlighting
+" TODO Why is'nt /autoload being executed by vundle
+" exec so '.getcwd().'/autoload/togglemode.vim'
+exec 'so '.getcwd().'/autoload/focusmode.vim'
 
+" Clear current highlighting
 hi clear
 if exists("syntax_on")
   syntax reset
 endif
-let colors_name = "focus"
+let colors_name="focus"
 
 " Lets concentrate on the light version first
 if &background == "light"
