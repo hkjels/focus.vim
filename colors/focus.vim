@@ -20,16 +20,16 @@ if &background == "light"
 
   " GUI
   hi Normal           guifg=#222222   guibg=#ffffff
-  hi StatusLine       guifg=#ffffff   guibg=#dddddd   gui=bold
-  hi StatusLineNC     guifg=#9bd4a9   guibg=#51b069
-  hi VertSplit        guifg=#3687a2   guibg=#3687a2
+  hi StatusLineNC     guifg=#ffffff   guibg=#c3daea   gui=bold
+  hi StatusLine       guifg=#9bd4a9   guibg=#51b069
+  hi VertSplit        guifg=#ffffff   guibg=#dddddd
   hi Folded           guifg=#3c78a2   guibg=#c3daea
   hi IncSearch        guifg=#708090   guibg=#f0e68c
   hi Pmenu            guifg=#ffffff   guibg=#cb2f27
   hi SignColumn       guibg=#1b5c8a
   hi ColorColumn      guibg=#eeeeee
   hi CursorLine       guibg=#eff2f4
-  hi LineNr           guifg=#ffffff   guibg=#dddddd   gui=bold
+  hi LineNr           guifg=#ffffff   guibg=#c3daea   gui=bold
   hi MatchParen       guibg=#cddae5
   hi Search           guifg=#800000   guibg=#ffae00
   hi IncSearch        guifg=#800000   guibg=#ffae00

@@ -2,9 +2,9 @@
 " Toggle focus
 " ============
 "
-" Switches between focused and 'hyper-focused'
-" editing. Go fullscreen and run `tfm` to really
-" get into the mood.
+" Switches between focused and 'hyper-focused' editing.
+" Go fullscreen, `:call ToggleFocusMode#ToggleFocusMode()`
+" and emerse into your code.
 
 fun! ToggleFocusMode#ToggleFocusMode()
   if (&foldcolumn != 12)
@@ -14,9 +14,10 @@ fun! ToggleFocusMode#ToggleFocusMode()
     set laststatus=0
     set foldcolumn=12
     set numberwidth=10
-    hi FoldColumn ctermfg=0 ctermbg=none guifg=White guibg=White
-    hi LineNr     ctermfg=0 ctermbg=none guifg=White guibg=White
-    hi NonText    ctermfg=0 ctermbg=none guifg=White guibg=White
+    hi VertSplit  ctermfg=0 ctermbg=none guifg=White    guibg=#eeeeee 
+    hi FoldColumn ctermfg=0 ctermbg=none guifg=#eeeeee  guibg=White
+    hi LineNr     ctermfg=0 ctermbg=none guifg=White    guibg=White
+    hi NonText    ctermfg=0 ctermbg=none guifg=White    guibg=White
   else
     set ruler
     set number
