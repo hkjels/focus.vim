@@ -1,4 +1,4 @@
-"
+
 " Focus color-scheme
 " ==================
 "
@@ -7,10 +7,6 @@
 " Author:   Henrik Kjelsberg <hkjels@me.com> (http://take.no/)
 " Version:  0.0.1
 "
-
-" TODO Why is'nt /autoload being executed by vundle
-" exec so '.getcwd().'/autoload/togglemode.vim'
-exec 'so '.getcwd().'/autoload/focusmode.vim'
 
 " Clear current highlighting
 hi clear
