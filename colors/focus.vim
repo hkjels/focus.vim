@@ -1,6 +1,3 @@
-
-" Focus color-scheme
-" ==================
 "
 " __Very simplistic color-scheme for vim! Comes in two flavors__
 "
@@ -20,6 +17,8 @@ if &background == "light"
 
   " GUI
   hi Normal           guifg=#222222   guibg=#ffffff
+  hi NonText          guifg=#dddddd   guibg=#ffffff
+  hi ExtraWhitespace  ctermbg=red     guibg=red
   hi StatusLineNC     guifg=#ffffff   guibg=#c3daea   gui=bold
   hi StatusLine       guifg=#9bd4a9   guibg=#51b069
   hi VertSplit        guifg=#ffffff   guibg=#dddddd
@@ -33,8 +32,6 @@ if &background == "light"
   hi MatchParen       guibg=#cddae5
   hi Search           guifg=#800000   guibg=#ffae00
   hi IncSearch        guifg=#800000   guibg=#ffae00
-  hi ExtraWhitespace  ctermbg=red     guibg=red
-  hi! link NonText Normal
   hi! link FoldColumn Normal
 
   " Language elements

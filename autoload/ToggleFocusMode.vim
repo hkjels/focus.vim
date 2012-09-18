@@ -18,6 +18,7 @@ fun! ToggleFocusMode#ToggleFocusMode()
     hi FoldColumn ctermfg=0 ctermbg=none guifg=#eeeeee  guibg=White
     hi LineNr     ctermfg=0 ctermbg=none guifg=White    guibg=White
     hi NonText    ctermfg=0 ctermbg=none guifg=White    guibg=White
+    on!
   else
     set ruler
     set number
