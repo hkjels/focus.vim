@@ -2,8 +2,9 @@
 " __Very simplistic color-scheme for vim! Comes in two flavors__
 "
 " Author:   Henrik Kjelsberg <hkjels@me.com> (http://take.no/)
-" Version:  0.0.1
+" Version:  0.0.2
 "
+
 
 " Clear current highlighting
 hi clear
@@ -12,62 +13,103 @@ if exists("syntax_on")
 endif
 let colors_name="focus"
 
-" Lets concentrate on the light version first
+
+" Improve readability
+set linespace=3
+set guifont=Monaco:h12
+
+
+" Background-agnostic coloring
+hi Cursor               guifg=slategrey   guibg=khaki
+hi Visual               guifg=#ffaaaa     guibg=indianred
+hi IncSearch            guifg=slategrey   guibg=khaki
+hi Todo                 guifg=indianred
+hi Directory            guifg=salmon
+hi ModeMsg              guifg=goldenrod
+hi MoreMsg              guifg=seagreen
+hi Question             guifg=springgreen
+hi WarningMsg           guifg=salmon
+hi StatusLineNC         gui=bold
+hi LineNr               gui=bold
+hi Number               gui=bold
+hi Statement            gui=bold
+hi Function             gui=bold
+hi PreProc              gui=bold
+hi Type                 gui=bold
+hi Title                gui=bold
+hi Comment              gui=italic
+hi StatusLine           gui=NONE
+hi Pmenu                gui=NONE
+hi PmenuSel             gui=NONE
+hi! link FoldColumn Normal
+
+
+" Light background
 if &background == "light"
 
   " GUI
-  hi Normal           guifg=#222222   guibg=#ffffff
-  hi NonText          guifg=#dddddd   guibg=#ffffff
-  hi ExtraWhitespace  ctermbg=red     guibg=red
-  hi StatusLineNC     guifg=#ffffff   guibg=#c3daea   gui=bold
-  hi StatusLine       guifg=#9bd4a9   guibg=#51b069
-  hi VertSplit        guifg=#ffffff   guibg=#dddddd
-  hi Folded           guifg=#3c78a2   guibg=#c3daea
-  hi IncSearch        guifg=#708090   guibg=#f0e68c
-  hi Pmenu            guifg=#ffffff   guibg=#cb2f27
-  hi SignColumn       guibg=#1b5c8a
-  hi ColorColumn      guibg=#eeeeee
-  hi CursorLine       guibg=#eff2f4
-  hi LineNr           guifg=#ffffff   guibg=#c3daea   gui=bold
-  hi MatchParen       guibg=#cddae5
-  hi Search           guifg=#800000   guibg=#ffae00
-  hi IncSearch        guifg=#800000   guibg=#ffae00
-  hi! link FoldColumn Normal
+  hi ColorColumn                            guibg=#eaf5fa
+  hi CursorLine                             guibg=#eff2f4
+  hi Folded               guifg=#3c78a2     guibg=#c3daea
+  hi LineNr               guifg=#ffffff     guibg=#c3daea
+  hi MatchParen                             guibg=#cddae5
+  hi NonText              guifg=#dddddd     guibg=#ffffff
+  hi Normal               guifg=#222222     guibg=#ffffff
+  hi Pmenu                guifg=#ffffff     guibg=#cb2f27
+  hi Search               guifg=#800000     guibg=#ffae00
+  hi SignColumn                             guibg=#1b5c8a
+  hi StatusLine           guifg=#9bd4a9     guibg=#51b069
+  hi StatusLineNC         guifg=#ffffff     guibg=#c3daea
+  hi VertSplit            guifg=#ffffff     guibg=#dddddd
 
   " Language elements
-  hi String       guifg=#0086d2
-  hi Constant     guifg=#0086d2
-  hi Number       guifg=#0086f7                   gui=bold
-  hi Statement    guifg=#fb660a                   gui=bold
-  hi Function     guifg=#ff0086                   gui=bold
-  hi PreProc      guifg=#ff0007                   gui=bold
-  hi Comment      guifg=#22a21f   guibg=#dbf3cd   gui=italic
-  hi Type         guifg=#70796b                   gui=bold
-  hi Error        guifg=#ffffff   guibg=#d40000
-  hi Identifier   guifg=#ff0086                   gui=bold
-  hi Label        guifg=#ff0086
-  hi Todo         guifg=#e50808   guibg=#dbf3cd   gui=bold
-  hi Title        guifg=#000000   gui=bold
-  hi Special      guifg=#fd8900
+  hi Comment              guifg=#22a21f     guibg=#dbf3cd
+  hi Constant             guifg=#0086d2
+  hi Error                guifg=#ffffff     guibg=#d40000
+  hi Function             guifg=#ff0086
+  hi Identifier           guifg=#ff0086
+  hi Label                guifg=#ff0086
+  hi Number               guifg=#1177aa
+  hi PreProc              guifg=#ff0007
+  hi Special              guifg=#fd8900
+  hi SpecialKey           guifg=#999999
+  hi Statement            guifg=#fb660a
+  hi String               guifg=#0086d2
+  hi Title                guifg=#222222
+  hi Todo                 guibg=#dbf3cd
+  hi Type                 guifg=#70796b
 
-  " HTML
-  hi htmlTag              guifg=#00bdec           gui=bold
-  hi htmlEndTag           guifg=#00bdec           gui=bold
-  hi htmlSpecialTagName   guifg=#4aa04a
-  hi htmlTagName          guifg=#4aa04a
-  hi htmlTagN             guifg=#4aa04a
 
-  " Python
-  hi pythonCoding         guifg=#ff0086
-  hi pythonRun            guifg=#ff0086
-  hi pythonBuiltinObj     guifg=#2b6ba2           gui=bold
-  hi pythonBuiltinFunc    guifg=#2b6ba2           gui=bold
-  hi pythonException      guifg=#ee0000           gui=bold
-  hi pythonExClass        guifg=#66cd66           gui=bold
-  hi pythonSpaceError     guibg=#f8e6e6
-  hi pythonDocTest        guifg=#2f5f49
-  hi pythonDocTest2       guifg=#3b916a
-  hi pythonFunction       guifg=#ee0000           gui=bold
-  hi pythonClass          guifg=#ff0086           gui=bold
+" Dark background
+else
+
+  " GUI
+  hi ColorColumn          guifg=#e8ecf0     guibg=#2a3a4a
+  hi CursorLine                             guibg=#203040
+  hi Folded               guifg=#cccccc     guibg=#405060
+  hi LineNr               guifg=#445464     guibg=#203040
+  hi NonText              guifg=#304050     guibg=#304050
+  hi Normal               guifg=#e8ecf0     guibg=#304050
+  hi Pmenu                guifg=#f6f3e8     guibg=#152535
+  hi PmenuSel             guifg=#000000     guibg=#cae682
+  hi Search               guifg=#000000     guibg=#ffff7d
+  hi SignColumn           guifg=#a6e22e     guibg=#203040
+  hi StatusLine           guifg=#667686     guibg=#182838
+  hi StatusLineNC         guifg=grey50      guibg=#203040
+  hi VertSplit            guifg=#102030     guibg=#102030
+
+  " Language elements
+  hi Comment              guifg=#8090a0
+  hi Constant             guifg=#ff6070
+  hi Delimiter            guifg=#8090a0
+  hi Identifier           guifg=#70d080
+  hi Number               guifg=#ffff80
+  hi PreProc              guifg=indianred
+  hi Special              guifg=#ecad2b
+  hi SpecialKey           guifg=yellowgreen
+  hi Statement            guifg=#6699D0
+  hi Title                guifg=indianred
+  hi Todo                 guibg=#304050
+  hi Type                 guifg=#8cd0d3
 
 endif
