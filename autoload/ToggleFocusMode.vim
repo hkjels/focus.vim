@@ -14,10 +14,8 @@ fun! ToggleFocusMode#ToggleFocusMode()
     set laststatus=0
     set foldcolumn=12
     set numberwidth=10
-    hi VertSplit  ctermfg=0 ctermbg=none guifg=White    guibg=#eeeeee 
-    hi FoldColumn ctermfg=0 ctermbg=none guifg=#eeeeee  guibg=White
-    hi LineNr     ctermfg=0 ctermbg=none guifg=White    guibg=White
-    hi NonText    ctermfg=0 ctermbg=none guifg=White    guibg=White
+    hi! link FoldColumn Comment
+    hi! link NonText Comment
     on!
   else
     set ruler
