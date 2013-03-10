@@ -21,7 +21,7 @@ set guifont=Monaco:h12
 
 " Background-agnostic coloring
 hi User1                guifg=springgreen guibg=seagreen
-hi User2                guifg=white       guibg=salmon
+hi User2                guifg=salmon      guibg=indianred
 hi Cursor               guifg=slategrey   guibg=khaki
 hi Visual               guifg=#ffaaaa     guibg=indianred
 hi IncSearch            guifg=slategrey   guibg=khaki
