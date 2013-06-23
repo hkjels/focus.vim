@@ -1,3 +1,4 @@
+
 "
 " __Very simplistic color-scheme for vim! Comes in two flavors__
 "
@@ -7,11 +8,18 @@
 
 
 " Clear current highlighting
-hi clear
-if exists("syntax_on")
-  syntax reset
+if version > 580
+  hi clear
+  if exists("syntax_on")
+    syntax reset
+  endif
 endif
-let colors_name="focus"
+let g:colors_name="focus"
+hi clear SignColumn
+hi clear SpellBad
+hi clear SpellRare
+hi clear StatusLine
+hi clear StatusLineNc
 
 
 " Improve readability
@@ -23,14 +31,16 @@ set guifont=Monaco:h12
 hi User1                guifg=springgreen guibg=seagreen
 hi User2                guifg=salmon      guibg=indianred
 hi Cursor               guifg=slategrey   guibg=khaki
-hi Visual               guifg=#ffaaaa     guibg=indianred
-hi IncSearch            guifg=slategrey   guibg=khaki
-hi Todo                 guifg=indianred
-hi Directory            guifg=salmon
-hi ModeMsg              guifg=goldenrod
-hi MoreMsg              guifg=seagreen
-hi Question             guifg=springgreen
-hi WarningMsg           guifg=salmon
+hi Visual               guifg=#ffaaaa     guibg=indianred   ctermbg=131   ctermfg=185
+hi IncSearch            guifg=slategrey   guibg=khaki       ctermbg=131   ctermfg=185
+hi Todo                 guifg=indianred   ctermfg=1
+hi Directory            guifg=salmon      ctermfg=1
+hi ModeMsg              guifg=goldenrod   ctermfg=130
+hi MoreMsg              guifg=seagreen    ctermfg=36
+hi Question             guifg=springgreen ctermfg=46
+hi WarningMsg           guifg=salmon      ctermfg=196
+hi SpellBad             gui=undercurl     cterm=underline
+hi SpellRare            gui=undercurl     cterm=underline
 hi StatusLineNC         gui=bold
 hi LineNr               gui=bold
 hi Number               gui=bold
@@ -86,32 +96,35 @@ if &background == "light"
 else
 
   " GUI
-  hi ColorColumn          guifg=#e8ecf0     guibg=#2a3a4a
+  hi ColorColumn          guifg=#e8ecf0     guibg=#2a3a4a     ctermbg=23
+  hi CursorLineNr         ctermfg=185
   hi CursorLine                             guibg=#203040
   hi Folded               guifg=#cccccc     guibg=#405060
-  hi LineNr               guifg=#445464     guibg=#203040
+  hi LineNr               guifg=#445464     guibg=#203040     ctermfg=23
   hi NonText              guifg=#304050     guibg=#304050
   hi Normal               guifg=#e8ecf0     guibg=#304050
   hi Pmenu                guifg=#f6f3e8     guibg=#152535
   hi PmenuSel             guifg=#000000     guibg=#cae682
   hi Search               guifg=#000000     guibg=#ffff7d
   hi SignColumn           guifg=#a6e22e     guibg=#203040
-  hi StatusLine           guifg=#667686     guibg=#182838
-  hi StatusLineNC         guifg=grey50      guibg=#203040
-  hi VertSplit            guifg=#102030     guibg=#102030
+  hi StatusLine           guifg=#667686     guibg=#182838     ctermfg=36    ctermbg=23
+  hi StatusLineNC         guifg=grey50      guibg=#203040     ctermfg=23
+  hi VertSplit            guifg=#102030     guibg=#102030     ctermfg=23    ctermbg=23
 
   " Language elements
-  hi Comment              guifg=#8090a0
+  hi Comment              guifg=#8090a0     ctermfg=240
+  hi String               ctermfg=221
   hi Constant             guifg=#ff6070
   hi Delimiter            guifg=#8090a0
-  hi Identifier           guifg=#70d080
-  hi Number               guifg=#ffff80
-  hi PreProc              guifg=indianred
+  hi Identifier           guifg=#70d080     ctermfg=42
+  hi Number               guifg=#ffff80     ctermfg=185
+  hi PreProc              guifg=indianred   ctermfg=1
   hi Special              guifg=#ecad2b
   hi SpecialKey           guifg=yellowgreen
-  hi Statement            guifg=#6699D0
-  hi Title                guifg=indianred
+  hi Statement            guifg=#6699D0     ctermfg=31
+  hi Title                guifg=indianred   ctermfg=1
   hi Todo                 guibg=#304050
   hi Type                 guifg=#8cd0d3
 
 endif
+
