@@ -126,5 +126,11 @@ else
   hi Todo                 guibg=#304050
   hi Type                 guifg=#8cd0d3
 
+  " Diff"
+  hi DiffAdd              ctermbg=29
+  hi DiffChange           ctermbg=27
+  hi DiffDelete           ctermbg=17     ctermfg=18
+  hi DiffText             ctermbg=197
+
 endif
 
