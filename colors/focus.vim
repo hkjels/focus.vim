@@ -3,7 +3,7 @@
 " __Very simplistic color-scheme for vim! Comes in two flavors__
 "
 " Author:   Henrik Kjelsberg <hkjels@me.com> (http://take.no/)
-" Version:  0.0.2
+" Version:  0.0.3
 "
 
 
@@ -59,7 +59,7 @@ hi! link FoldColumn Normal
 " Light background
 if &background == "light"
 
-  " GUI
+  " UI
   hi ColorColumn                            guibg=#eaf5fa
   hi CursorLine                             guibg=#eff2f4
   hi Folded               guifg=#3c78a2     guibg=#c3daea
@@ -95,7 +95,7 @@ if &background == "light"
 " Dark background
 else
 
-  " GUI
+  " UI
   hi ColorColumn          guifg=#e8ecf0     guibg=#2a3a4a     ctermbg=23
   hi CursorLineNr         ctermfg=185
   hi CursorLine                             guibg=#203040
@@ -103,8 +103,9 @@ else
   hi LineNr               guifg=#445464     guibg=#203040     ctermfg=23
   hi NonText              guifg=#304050     guibg=#304050
   hi Normal               guifg=#e8ecf0     guibg=#304050
-  hi Pmenu                guifg=#f6f3e8     guibg=#152535
-  hi PmenuSel             guifg=#000000     guibg=#cae682
+  hi Pmenu                guifg=#f6f3e8     guibg=#152535     ctermbg=120
+  hi PmenuSel             guifg=#000000     guibg=#cae682     ctermbg=29    ctermfg=0
+  hi PmenuSbar            guibg=#d6d6d6                       ctermbg=0
   hi Search               guifg=#000000     guibg=#ffff7d
   hi SignColumn           guifg=#a6e22e     guibg=#203040
   hi StatusLine           guifg=#667686     guibg=#182838     ctermfg=36    ctermbg=23

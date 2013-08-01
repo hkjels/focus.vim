@@ -2,7 +2,45 @@
 focus.vim
 =========
 
-Colorscheme in two flavors. To switch between them, simply execute
-`ToggleSchemeFlavor`. To really focus on a specific task, I'd recommend
-giving `ToggleFocusMode` a try as well. __Happy coding!__
+## Focus.vim is a colorscheme made for general programming and markdown publishing.
+
+
+## Features
+
+* The scheme works properly with 256-colors and GUI versions of vim
+* Function to toggle between light and dark version
+* Focus-mode that lets you get rid of all distractions
+
+
+# Installation
+
+I'd recommend installing focus.vim using [neobundle](https://github.com/Shougo/neobundle.vim).
+
+    NeoBundle 'hkjels/focus.vim'
+
+
+## License
+
+(The MIT License)
+
+Copyright (c) 2013 Henrik Kjelsberg &lt;hkjels@me.com&gt;
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
